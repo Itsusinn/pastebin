@@ -1,0 +1,13 @@
+name = "pastebin"
+main = "build/worker/shim.mjs"
+compatibility_date = "2023-03-22"
+
+kv_namespaces = [
+  { binding = "KVTEST", id = "943055fcc6354991a9f4f83160eae5bb", preview_id = "2fa24d02631f483dbe8e6507addb7e52" }
+]
+
+[vars]
+TEST = "TEST"
+
+[build]
+command = "cargo install -q worker-build --target=x86_64-unknown-linux-musl && worker-build --release"
